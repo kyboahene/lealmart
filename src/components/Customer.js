@@ -1,17 +1,24 @@
+/* eslint-disable no-restricted-globals */
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Customer = ({ customer }) => {
   const handleDelete = () => {
-    fetch('https://reqres.in/api/users/' + customer.id, {
-      method: 'DELETE',
-    })
-      .then(() => {
-        alert('User deleted successfully')
+    var del = confirm('Are you sure you want to delete')
+
+    if (del === true) {
+      fetch('https://reqres.in/api/users/' + customer.id, {
+        method: 'DELETE',
       })
-      .catch((err) => {
-        alert(err.message)
-      })
+        .then(() => {
+          alert('User deleted successfully')
+        })
+        .catch((err) => {
+          alert(err.message)
+        })
+    } else {
+      alert('you cancelled it!!!')
+    }
   }
   return (
     <div>

@@ -41,25 +41,19 @@ const EditUser = () => {
           type="text"
           name="first_name"
           value={customer.first_name}
-          onChange={(e) =>
-            setFirst_name({ ...first_name, [e.target.name]: e.target.value })
-          }
+          onChange={(e) => setFirst_name({ [e.target.name]: e.target.value })}
         />
         <input
           type="text"
           name="last_name"
           value={customer.last_name}
-          onChange={(e) =>
-            setLast_name({ ...last_name, [e.target.name]: e.target.value })
-          }
+          onChange={(e) => setLast_name({ [e.target.name]: e.target.value })}
         />
         <input
           type="text"
           name="email"
           value={customer.email}
-          onChange={(e) =>
-            setEmail({ ...email, [e.target.name]: e.target.value })
-          }
+          onChange={(e) => setEmail({ [e.target.name]: e.target.value })}
         />
         <input
           type="text"

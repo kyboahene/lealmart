@@ -13,7 +13,7 @@ const CreateUser = (props) => {
 
     const newUser = { first_name, last_name, email }
 
-    fetch('', {
+    fetch('https://reqres.in/api/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newUser),

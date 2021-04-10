@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useParams } from 'react-router'
 import useFectch from '../Hooks/useFectch'
 
 const EditUser = () => {

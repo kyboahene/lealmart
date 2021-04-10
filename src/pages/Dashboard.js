@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Customer from '../components/Customer'
 import useFectch from '../Hooks/useFectch'
 
@@ -14,6 +15,9 @@ const Dashboard = () => {
             <input type="search" className="form-control" />
           </div>
         </form>
+        <Link to="/create">
+          <button>New User</button>
+        </Link>
         <table className="table">
           <thead>
             <th>id</th>

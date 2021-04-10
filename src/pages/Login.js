@@ -17,7 +17,6 @@ const Login = (props) => {
       },
       body: JSON.stringify(newUser),
     })
-
     res = await res.json()
     if (res.error !== '') {
       console.log(res)

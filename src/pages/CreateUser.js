@@ -28,12 +28,13 @@ const CreateUser = (props) => {
   }
   return (
     <div>
-      <h4>Edit Page</h4>
+      <h4>Create Page</h4>
       {error && <div>Errror: {error}</div>}
       <form onSubmit={handleCreate}>
         <input
           type="text"
           name="first_name"
+          placeholder="First Name"
           value=""
           onChange={(e) =>
             setFirst_name({ ...first_name, [e.target.name]: e.target.value })
@@ -42,6 +43,7 @@ const CreateUser = (props) => {
         <input
           type="text"
           name="last_name"
+          placeholder="Last Name"
           value=""
           onChange={(e) =>
             setLast_name({ ...last_name, [e.target.name]: e.target.value })
@@ -50,6 +52,7 @@ const CreateUser = (props) => {
         <input
           type="text"
           name="email"
+          placeholder="Email"
           value=""
           onChange={(e) =>
             setEmail({ ...email, [e.target.name]: e.target.value })
@@ -58,11 +61,12 @@ const CreateUser = (props) => {
         <input
           type="text"
           name="avatar"
+          placeholder="Avatar"
           onChange={(e) =>
             setAvatar({ ...avatar, [e.target.name]: e.target.value })
           }
         />
-        <button type="submit">Edit</button>
+        <button type="submit">Create</button>
       </form>
     </div>
   )

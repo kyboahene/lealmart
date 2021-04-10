@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Dashboard from '../../reactlealmart/src/pages/Dashboard'
 import EditUser from '../../reactlealmart/src/pages/EditUser'
 import Login from '../../reactlealmart/src/pages/Login'
@@ -13,9 +13,9 @@ function App() {
       <Switch>
         <AuthRoute path="/login" component={Login} />
         <AuthRoute path="/register" component={Register} />
-        <PrivateRoute exact path="/" component={Dashboard} />
-        <PrivateRoute path="/edit/:id" component={EditUser} />
-        <PrivateRoute path="/create" component={CreateUser} />
+        <Route exact path="/" component={Dashboard} />
+        <Route path="/edit/:id" component={EditUser} />
+        <Route path="/create" component={CreateUser} />
       </Switch>
     </BrowserRouter>
   )

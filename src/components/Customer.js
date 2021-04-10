@@ -3,11 +3,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Customer = ({ customer }) => {
-  const handleDelete = () => {
+  const handleDelete = (id) => {
+    console.log(id)
     var del = confirm('Are you sure you want to delete')
 
     if (del === true) {
-      fetch('https://reqres.in/api/users/' + customer.id, {
+      fetch('https://reqres.in/api/users/' + id, {
         method: 'DELETE',
       })
         .then(() => {
@@ -34,7 +35,7 @@ const Customer = ({ customer }) => {
             </td>
             <td>
               <Link to={`/edit/${value.id}`}>Edit</Link>{' '}
-              <span onClick={handleDelete}>Delete</span>{' '}
+              <span onClick={() => handleDelete(value.id)}>Delete</span>{' '}
             </td>
           </tr>
         )

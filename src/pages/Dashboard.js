@@ -6,10 +6,17 @@ import useFectch from '../Hooks/useFectch'
 const Dashboard = () => {
   const { customer, loading, errors } = useFectch('https://reqres.in/api/users')
 
+  const handleLogout = (props) => {
+    localStorage.removeItem('userInfo')
+    props.history.push('/login')
+  }
+
   return (
     <div className="dashboard-container">
       <div className="dashboard-row">
         <h4>My Customers</h4>
+
+        <button onClick={handleLogout}>Logout</button>
         <form>
           <div className="form-outline">
             <input type="search" className="form-control" />

@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch } from 'react-router-dom'
 import Dashboard from '../../reactlealmart/src/pages/Dashboard'
 import EditUser from '../../reactlealmart/src/pages/EditUser'
 import Login from '../../reactlealmart/src/pages/Login'
